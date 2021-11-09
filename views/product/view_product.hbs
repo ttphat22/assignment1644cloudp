@@ -1,0 +1,90 @@
+{{>headernavCus}}
+<div class="main-panel">
+    {{>togglenavCus}}
+    <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title">View Product</h4>          
+            </div>
+
+            <div class="card-body">
+              <form action="/view_product" method="POST" autocomplete="off" enctype="multipart/form-data">
+              {{!-- <input type="hidden" name="_id" value="{{product._id}}"> --}}
+                <div class="row">
+                  <div class="col-md-5 text-right">
+                    <div class="form-group">
+                      
+                      <img src="/uploads/{{product.image}}" alt="product image" width="90%">                                    
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 text-left">  
+                      <div class="row">
+                          <div class="col-md-4">
+                            
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Product ID</label>    
+                                <p>{{product.productID}}</p>
+                            </div>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Product Name</label>
+                                <p>{{product.productName}}</p>
+                                               
+                            </div>
+                          </div>
+                      </div>
+
+                        <div class="row">
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                          <label class="bmd-label-floating">Price</label>
+                          <p>${{product.productPrice}}</p>
+                          
+                        </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Category Name</label>
+                            <p>{{product.productCategory}}</p>
+                           
+                        </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                          <label class="bmd-label-floating">Quantity</label>
+                          <p>{{product.productQuantity}}</p>
+                          
+                        </div>
+                        </div>
+                      </div>
+                      
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Description</label>
+                            <p >{{product.productDescription}}</p>
+                            
+                        </div>
+                      
+                      
+                        
+                      
+                    </div>
+                    
+                    <div class="col-md-1">
+
+                    </div>
+                </div>
+    
+              </form>
+            </div>
+          </div>
+       
+        
+      </div>
+    </div>
+  </div>
+</div>
